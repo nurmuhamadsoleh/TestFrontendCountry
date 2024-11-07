@@ -77,7 +77,7 @@ export default function DashboardComponent(props: IProps) {
                 ? Country.map((item: any, index: number) => (
                     <div
                       key={index}
-                      className="flex gap-2 justify-between border-solid border-black border-2 hover:bg-slate-200 p-2 md:mb-2"
+                      className="flex gap-2 justify-between border-solid border-black border-2 hover:bg-slate-200 p-2 mb-2"
                     >
                       <div className="flex basis-auto">
                       <Image

@@ -8,14 +8,15 @@ GlobalOutlined
 import Image from "next/image";
 import NoImage from "assets/images/noimage.jpg"
 import React from "react";
+import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
 interface IProps {
   isLoadingDetailCountry: boolean;
-  initialDetailCountry: any;
+  initialDetailCountry?: any;
 }
 export default function DetailCountryComponent(props: IProps) {
-    const {setCountry }: IStore = Store()
+    const {setCountry, country }: IStore = Store()
   const {initialDetailCountry, isLoadingDetailCountry} = props;
   const router = useRouter();
   return (
@@ -74,7 +75,12 @@ export default function DetailCountryComponent(props: IProps) {
               <GlobalOutlined className="text-white text-lg hover:text-[#62bbf2]" />
             }
             onClick={() => {
-              setCountry && setCountry(initialDetailCountry?.region);
+              if (country && country.includes(initialDetailCountry.region)) {
+                toast.info("Region sudah ada di daftar kerja sama");
+                } else {
+                setCountry && setCountry(initialDetailCountry.region);
+                  toast.success("Berhasil Melakukan Kerja Sama");
+                }
             }}
           >
             Kerja Sama
