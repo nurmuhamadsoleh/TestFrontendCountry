@@ -1,5 +1,3 @@
-import "swiper/css";
-import "swiper/css/pagination";
 import "react-toastify/dist/ReactToastify.css";
 import "@uppy/core/dist/style.css";
 import "@uppy/drag-drop/dist/style.css";
