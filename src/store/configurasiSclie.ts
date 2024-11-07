@@ -1,7 +1,7 @@
 
 
 export interface ICountry {
-    country?: []
+    country?: any[]
     setCountry?: (_params: any) => void
     setClearCountry?: (_params:any) => void
 }
