@@ -30,8 +30,8 @@ export default function DashboardComponent(props: IProps) {
           const { handleSubmit, dirty } = formProps;
           return (
           <FormANTD layout="horizontal" onFinish={handleSubmit} className="  mx-auto">
-          <div className="flex flex-col md:flex-row gap-2 w-auto">
-            <div className="w-full md:flex-1">
+          <div className="flex  gap-2 w-auto">
+            <div className="w-3/4 md:flex-1 md:w-full">
               <Field
                 name="SEARCH"
                 component={Input}
@@ -48,7 +48,7 @@ export default function DashboardComponent(props: IProps) {
                 className="w-full"
               />
             </div>
-            <div className="w-full md:w-auto">
+            <div className="w-1/4 md:w-auto">
               <Button
                 icon={<SearchOutlined className="text-lg text-white" />}
                 htmlType="submit"

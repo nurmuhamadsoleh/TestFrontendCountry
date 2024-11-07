@@ -84,7 +84,7 @@ export default function DetailCountryComponent(props: IProps) {
             className="text-white font-normal bg-[#62bbf2]"
             onClick={() => router.push(`/cooperation`)}
           >
-            Daftar Negara Kerja Sama
+            Daftar Kerja Sama
           </Button>
         </Space>
       </div>
