@@ -37,14 +37,14 @@ export default function DetailCooperationComponent() {
                 </span>
                 <Button
                   size="middle"
+                  onClick={() =>
+                    setClearCountry &&
+                    setClearCountry(country.filter((c) => c === item))
+                  }
                   className="text-white bg-red-800 hover:bg-red-400"
                   icon={
                     <CloseOutlined
                       className="text-white hover:text-red-800 text-lg"
-                      onClick={() =>
-                        setClearCountry &&
-                        setClearCountry(country.filter((c) => c !== item))
-                      }
                     />
                   }
                 />
